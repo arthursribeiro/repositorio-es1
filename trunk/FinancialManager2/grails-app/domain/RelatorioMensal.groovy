@@ -1,0 +1,4 @@
+
+class RelatorioMensal extends Relatorio {
+
+}
