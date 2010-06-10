@@ -1,4 +1,4 @@
-class UserController {
+class UsuarioController {
 	
     def login = {
     		
