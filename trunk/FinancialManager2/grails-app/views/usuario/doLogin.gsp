@@ -2,29 +2,29 @@
     <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
                        <meta name="layout" content="main" />
-         <title>User Login</title>
+         <title>Login</title>
     </head>
     <body>
         <div class="body">
             <g:form action="doLogin" method="post">
                 <div class="dialog">
-                                <p>Enter your login details below:</p>
+                                <p>Entre com seus dados abaixo:</p>
                  <table class="userForm">
                    <tr class='prop'>
                        <td valign='top' style='text-align:left;' width='20%'>
-                           <label for='email'>Email:</label>
+                           <label for='userName'>UserName:</label>
                        </td>
                        <td valign='top' style='text-align:left;' width='80%'>
-                           <input id="email" type='text' name='email' value='${user?.email}' />
+                           <input id="userName" type='text' name='userName' value='${usuario?.userName}' />
                       </td>
                   </tr>
                   <tr class='prop'>
                       <td valign='top' style='text-align:left;' width='20%'>
-                          <label for='password'>Password:</label>
+                          <label for='senha'>Senha:</label>
                       </td>
                       <td valign='top' style='text-align:left;' width='80%'>
-                          <input id="password" type='password' name='password'
-                                 value='${user?.password}' />
+                          <input id="senha" type='password' name='senha'
+                                 value='${usuario?.senha}' />
                       </td>
                   </tr>
                </table>
@@ -38,4 +38,3 @@
         </div>
     </body>
 </html>
-
