@@ -8,7 +8,9 @@
 </head>
 <body>
   <div class="nav" align="right">
+    <span class="menuButton"><a class="text">${session.usuario?.userName}</a></span>
     <span class="menuButton"><a class="text" href="${createLink(uri: '/about.gsp')}">Sobre</a></span>
+    <span class="menuButton"><a class="text" href="${createLink(uri: '/logout.gsp')}">Sair</a></span>
   </div>
   <div id="spinner" class="spinner" style="display:none;">
     <img src="${resource(dir:'images',file:'spinner.gif')}" alt="Spinner" />

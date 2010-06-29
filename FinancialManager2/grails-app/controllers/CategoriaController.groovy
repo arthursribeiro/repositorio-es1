@@ -15,10 +15,10 @@ class CategoriaController {
         categorias = Categoria.list(params)
         cartoes = CartaoDeCredito.list(params)
     }
-	
+
     def checkLogin() {
         if (!session.usuario) {
-            redirect(controller:"usuario", action:"doLogin")
+            redirect(controller:"login", action:"doLogin")
         }
     }
 	
