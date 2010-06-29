@@ -10,7 +10,7 @@ class Categoria {
     }
 	
     def constraints = {
-        nome(size:3..20, blank:false)
+        nome(size:3..20, blank:false, unique:true)
         fixa(blank:false)
     }
 
