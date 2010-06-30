@@ -2,7 +2,6 @@
 class Categoria {
 
     String nome
-    Boolean fixa
     static hasMany = [despesas:Despesa]
 
     String toString() {

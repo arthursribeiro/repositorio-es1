@@ -1,7 +1,7 @@
 
 class UsuarioMaster extends Usuario {
 	
-	boolean master = true
+    private static final boolean master = true
 	
 	
 }
