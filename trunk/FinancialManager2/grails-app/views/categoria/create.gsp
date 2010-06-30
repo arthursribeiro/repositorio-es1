@@ -29,15 +29,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="fixa"><g:message code="categoria.fixa.label" default="Fixa" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: categoriaInstance, field: 'fixa', 'errors')}">
-                                    <g:checkBox name="fixa" value="${categoriaInstance?.fixa}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="nome"><g:message code="categoria.nome.label" default="Nome" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: categoriaInstance, field: 'nome', 'errors')}">

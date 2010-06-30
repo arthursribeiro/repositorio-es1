@@ -30,13 +30,6 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="categoria.fixa.label" default="Fixa" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${categoriaInstance?.fixa}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="categoria.despesas.label" default="Despesas" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
