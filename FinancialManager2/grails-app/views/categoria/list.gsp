@@ -24,8 +24,6 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'categoria.id.label', default: 'Id')}" />
                         
-                            <g:sortableColumn property="fixa" title="${message(code: 'categoria.fixa.label', default: 'Fixa')}" />
-                        
                             <g:sortableColumn property="nome" title="${message(code: 'categoria.nome.label', default: 'Nome')}" />
                         
                         </tr>
