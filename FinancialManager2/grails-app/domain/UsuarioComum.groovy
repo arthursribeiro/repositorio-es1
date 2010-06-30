@@ -1,5 +1,5 @@
 
 class UsuarioComum extends Usuario {
-	boolean master = false
+	private static final boolean master = false
 
 }

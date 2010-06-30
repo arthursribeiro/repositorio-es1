@@ -1,7 +1,6 @@
 
 class Despesa {
 
-
 	String nome
 	Float valor
 	String descricao
@@ -9,6 +8,7 @@ class Despesa {
 	Boolean aberta
         Categoria categoria
 	static belongsTo = Categoria
+        Boolean fixa
         
 	String toString() {
 		"$data : $nome - $valor"
