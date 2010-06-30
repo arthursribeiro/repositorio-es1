@@ -1,6 +1,8 @@
-class DespesaController {
+class DespesaController extends BaseController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+
+    def beforeInterceptor = [action:this.&auth]
 
     def index = {
         redirect(action: "list", params: params)

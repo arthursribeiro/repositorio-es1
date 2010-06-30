@@ -1,6 +1,8 @@
-class LoginController {
+class LoginController extends BaseController {
 
     def index = {redirect(action:doLogin)}
+
+    def beforeInterceptor = [action:this.&auth, only:logout]
 
     def doLogin = {
         if (request.method == "GET") {
