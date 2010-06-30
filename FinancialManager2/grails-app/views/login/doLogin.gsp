@@ -6,6 +6,14 @@
     </head>
     <body>
         <div class="body">
+          <g:if test="${flash.message}">
+         <div class="message">${flash.message}</div>
+        </g:if>
+        <g:hasErrors bean="${usuario}">
+          <div class="errors">
+            <g:renderErrors bean="${user}" as="list" />
+          </div>
+        </g:hasErrors>
             <g:form action="doLogin" method="post">
                 <div class="dialog">
                                 <p>Entre com seus dados abaixo:</p>
