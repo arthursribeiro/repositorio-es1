@@ -3,7 +3,7 @@ class Categoria {
 
     String nome
     Boolean fixa
-    ArrayList<Despesa> despesas
+    static hasMany = [despesas:Despesa]
 
     String toString() {
         return nome
