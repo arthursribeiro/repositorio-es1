@@ -1,0 +1,5 @@
+
+class CartaoDeCreditoControllerController {
+
+    def index = { }
+}
