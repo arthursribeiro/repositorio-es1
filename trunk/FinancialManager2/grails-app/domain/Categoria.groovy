@@ -8,8 +8,8 @@ class Categoria {
         return nome
     }
 	
-    def constraints = {
-        nome(size:3..20, blank:false, unique:true)
+    static constraints = {
+        nome(nullable: false, size:2..50, blank:false, unique:true)
     }
 
 

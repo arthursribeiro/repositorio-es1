@@ -21,7 +21,7 @@ class DespesaCartaoController {
         def despesaCartaoInstance = new DespesaCartao(params)
         if ((!despesaCartaoInstance.parcelado && despesaCartaoInstance.numeroParcelas != 0) ||
              (despesaCartaoInstance.parcelado && despesaCartaoInstance.numeroParcelas <= 1)){
-            flash.message = "Verifique o número de parcelas. Despesa não criada."
+            flash.message = "Verifique o número de parcelas. Despesa não criada/editada."
             redirect(action: "list")
         }
         else if (despesaCartaoInstance.save(flush: true)) {
@@ -57,7 +57,7 @@ class DespesaCartaoController {
         def despesaCartaoInstance = DespesaCartao.get(params.id)
         if ((!despesaCartaoInstance.parcelado && despesaCartaoInstance.numeroParcelas != 0) ||
              (despesaCartaoInstance.parcelado && despesaCartaoInstance.numeroParcelas <= 1)){
-            flash.message = "Verifique o número de parcelas. Despesa não criada."
+            flash.message = "Verifique o número de parcelas. Despesa não criada/editada."
             redirect(action: "list")
         }
         else if (!despesaCartaoInstance) {
@@ -73,7 +73,7 @@ class DespesaCartaoController {
         def despesaCartaoInstance = DespesaCartao.get(params.id)
         if ((!despesaCartaoInstance.parcelado && despesaCartaoInstance.numeroParcelas != 0) ||
              (despesaCartaoInstance.parcelado && despesaCartaoInstance.numeroParcelas <= 1)){
-            flash.message = "Verifique o número de parcelas. Despesa não criada."
+            flash.message = "Verifique o número de parcelas. Despesa não criada/editada."
             redirect(action: "list")
         }
         else if (despesaCartaoInstance) {

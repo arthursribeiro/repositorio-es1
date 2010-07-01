@@ -1,6 +1,7 @@
 class CategoriaController extends BaseController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static String oldName = null
 
     def beforeInterceptor = [action:this.&auth]
 
@@ -16,12 +17,18 @@ class CategoriaController extends BaseController {
     def create = {
         def categoriaInstance = new Categoria()
         categoriaInstance.properties = params
+
         return [categoriaInstance: categoriaInstance]
     }
 
     def save = {
         def categoriaInstance = new Categoria(params)
-        if (categoriaInstance.save(flush: true)) {
+        if (categoriaInstance != null && categoriaInstance.nome != null &&
+            categoriaInstance.nome.trim().equals("")){
+            flash.message = "Nome invalido. Categoria não criada/editada."
+            redirect(action: "list")
+        }
+        else if (categoriaInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'categoria.label', default: 'Categoria'), categoriaInstance.id])}"
             redirect(action: "show", id: categoriaInstance.id)
         }
@@ -43,18 +50,32 @@ class CategoriaController extends BaseController {
 
     def edit = {
         def categoriaInstance = Categoria.get(params.id)
-        if (!categoriaInstance) {
+        if (categoriaInstance != null && categoriaInstance.nome != null &&
+            categoriaInstance.nome.trim().equals("")){
+            flash.message = "Nome invalido. Categoria não criada/editada."
+            redirect(action: "list")
+        }
+        else if (!categoriaInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'categoria.label', default: 'Categoria'), params.id])}"
             redirect(action: "list")
         }
         else {
+            this.oldName = categoriaInstance.nome.substring(0)
+            System.out.println(oldName)
             return [categoriaInstance: categoriaInstance]
         }
     }
 
     def update = {
         def categoriaInstance = Categoria.get(params.id)
-        if (categoriaInstance) {
+        if (categoriaInstance != null && categoriaInstance.nome != null &&
+            categoriaInstance.nome.trim().equals("")){
+            //categoriaInstance.nome = oldName
+            System.out.println(this.oldName)
+            flash.message = "Nome invalido. Categoria não criada/editada."
+            redirect(action: "list")
+        }
+        else if (categoriaInstance) {
             if (params.version) {
                 def version = params.version.toLong()
                 if (categoriaInstance.version > version) {
