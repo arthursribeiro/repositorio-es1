@@ -65,10 +65,17 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="despesa.fixa.label" default="Fixa" /></td>
+                            
+                            <td valign="top" class="value"><g:formatBoolean boolean="${despesaInstance?.fixa}" /></td>
+                            
+                        </tr>
+
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="despesa.aberta.label" default="Aberta" /></td>
-                            
+
                             <td valign="top" class="value"><g:formatBoolean boolean="${despesaInstance?.aberta}" /></td>
-                            
+
                         </tr>
                     
                     </tbody>
