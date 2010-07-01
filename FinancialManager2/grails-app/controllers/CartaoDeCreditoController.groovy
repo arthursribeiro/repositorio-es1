@@ -1,5 +1,0 @@
-
-class CartaoDeCreditoControllerController {
-
-    def index = { }
-}
