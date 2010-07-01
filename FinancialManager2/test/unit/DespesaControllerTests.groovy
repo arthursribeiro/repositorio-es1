@@ -9,7 +9,4 @@ class DespesaControllerTests extends ControllerUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
-
-    }
 }
