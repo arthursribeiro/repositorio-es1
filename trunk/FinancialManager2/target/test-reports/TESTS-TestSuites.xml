@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="1" failures="0" hostname="amaury-notebook" id="0" name="BaseControllerTests" package="" tests="1" time="0.844" timestamp="2010-07-01T11:37:08">
+      <properties />
+
+      <testcase classname="BaseControllerTests" name="testSomething" time="0.844">
+          <error type="java.lang.InstantiationException">java.lang.InstantiationException
+	at grails.test.MvcUnitTestCase.newInstance(MvcUnitTestCase.groovy:106)
+	at grails.test.ControllerUnitTestCase.super$6$newInstance(ControllerUnitTestCase.groovy)
+	at grails.test.ControllerUnitTestCase.newInstance(ControllerUnitTestCase.groovy:111)
+	at grails.test.ControllerUnitTestCase.setUp(ControllerUnitTestCase.groovy:54)
+	at BaseControllerTests.super$7$setUp(BaseControllerTests.groovy)
+	at BaseControllerTests.setUp(BaseControllerTests.groovy:5)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="amaury-notebook" id="1" name="DespesaControllerTests" package="" tests="1" time="0.0" timestamp="2010-07-01T11:37:09">
+      <properties />
+
+      <testcase classname="junit.framework.TestSuite$1" name="warning" time="0.0">
+          <failure message="No tests found in DespesaControllerTests" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: No tests found in DespesaControllerTests
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from warning--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from warning--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="amaury-notebook" id="2" name="SistemaControllerTests" package="" tests="1" time="0.219" timestamp="2010-07-01T11:37:09">
+      <properties />
+
+      <testcase classname="SistemaControllerTests" name="testSomething" time="0.219" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="amaury-notebook" id="3" name="CategoriaTestTests" package="categoria" tests="1" time="0.016" timestamp="2010-07-01T11:37:09">
+      <properties />
+
+      <testcase classname="categoria.CategoriaTestTests" name="testSomething" time="0.016" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
