@@ -43,6 +43,11 @@ class DespesaController extends BaseController {
 
     def edit = {
         def despesaInstance = Despesa.get(params.id)
+        if((!(despesaInstance?.aberta)) && (session.usuario.class == UsuarioComum)) {
+            flash['message'] = 'Você não pode editar esta despesa, pois a mesma está fechada.'
+            redirect(action: "list")
+            return
+        }
         if (!despesaInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'despesa.label', default: 'Despesa'), params.id])}"
             redirect(action: "list")
@@ -81,6 +86,11 @@ class DespesaController extends BaseController {
 
     def delete = {
         def despesaInstance = Despesa.get(params.id)
+        if((!(despesaInstance?.aberta)) && (session.usuario.class == UsuarioComum)) {
+            flash['message'] = 'Você não pode deletar esta despesa, pois a mesma está fechada.'
+            redirect(action: "list")
+            return
+        }
         if (despesaInstance) {
             try {
                 despesaInstance.delete(flush: true)
