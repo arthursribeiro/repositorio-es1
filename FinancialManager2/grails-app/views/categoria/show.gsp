@@ -12,6 +12,7 @@
             <span class="menuButton"><a class="home" href="${createLink(uri: '/')}">Home</a></span>
             <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
             <span class="menuButton"><g:link class="create" controller="despesa" action="create" params="['categoria.id': categoriaInstance?.id]"><g:message code="Adicionar despesa" args="[entityName]" /></g:link></span>
+            <span class="menuButton"><g:link class="create" controller="despesaCartao" action="create" params="['categoria.id': categoriaInstance?.id]"><g:message code="Adicionar despesa de cartão" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
             <h1><g:message code="default.show.label" args="[entityName]" /></h1>
