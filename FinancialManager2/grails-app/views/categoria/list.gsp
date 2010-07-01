@@ -33,8 +33,7 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${categoriaInstance.id}">${fieldValue(bean: categoriaInstance, field: "id")}</g:link></td>
-                        
-                            <td><g:formatBoolean boolean="${categoriaInstance.fixa}" /></td>
+                      
                         
                             <td>${fieldValue(bean: categoriaInstance, field: "nome")}</td>
                         
