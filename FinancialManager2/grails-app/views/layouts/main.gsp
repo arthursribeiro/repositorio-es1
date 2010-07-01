@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="nav" align="right">
-    <span class="menuButton"><a class="text" href="${createLink(uri: '/about.gsp')}">Sobre</a></span>
+    <span class="menuButton"><a class="text" href="${createLink(uri: '/about.gsp')}">About</a></span>
   </div>
   <div id="spinner" class="spinner" style="display:none;">
     <img src="${resource(dir:'images',file:'spinner.gif')}" alt="Spinner" />

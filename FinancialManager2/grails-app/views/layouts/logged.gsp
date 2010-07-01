@@ -9,8 +9,8 @@
 <body>
   <div class="nav" align="right">
     <span class="menuButton"><a class="text">${session.usuario?.userName}</a></span>
-    <span class="menuButton"><a class="text" href="${createLink(uri: '/about.gsp')}">Sobre</a></span>
-    <span class="menuButton"><g:link class="login" controller="login" action="logout">Sair</g:link></span>
+    <span class="menuButton"><a class="text" href="${createLink(uri: '/about.gsp')}">About</a></span>
+    <span class="menuButton"><g:link class="login" controller="login" action="logout">Logout</g:link></span>
   </div>
   <div id="spinner" class="spinner" style="display:none;">
     <img src="${resource(dir:'images',file:'spinner.gif')}" alt="Spinner" />
